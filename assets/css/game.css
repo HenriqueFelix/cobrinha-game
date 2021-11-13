@@ -1,0 +1,65 @@
+.container-menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    background: rebeccapurple;
+    background-image: url("../img/background-menu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 25px;
+}
+
+.menu {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: #fff;
+    padding: 25px;
+    max-width: 400px;
+    border: 1px solid #dfdfdf;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.94);
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.94);
+}
+
+.menu .col-md-12 .d-grid {
+    margin-top: 25px;
+}
+
+.toggle-audio {
+    font-size: 28px;
+}
+
+.container-game {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    background: rebeccapurple;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+canvas {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.94);
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.94);
+}
+
+.hide {
+    display: none;
+}

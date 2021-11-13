@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Jogo da cobrinha</title>
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/boxicons.min.css" />
+	<link rel="stylesheet" href="assets/css/game.css" />
+
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery-3.6.0.js"></script>
+	<script src="assets/js/game.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			var game = new Game({
+				stage: document.getElementById('stage'),
+				vel: 1
+			});
+
+			$(".toggle-audio").click(function () {
+				$(this).toggleClass("bxs-volume-mute");
+
+				var myAudio = document.getElementById('playAudio');
+
+				if (myAudio.duration > 0 && !myAudio.paused) {
+					myAudio.pause();
+				} else {
+					myAudio.play();
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container-game">
+		<!-- <h1>Jogo da cobrinha</h1> -->
+		<div class="content-center">
+			<canvas id="stage" width="600" height="600"></canvas>
+
+			<div class="row">
+				<div class="col-md-12">
+					<audio controls autoplay loop id="playAudio" class="hide">
+						<source src="assets/sound/game.ogg" type="audio/mpeg">
+					</audio>
+					<i toggle="#playAudio" class="bx bxs-volume-mute bxs-volume-full field-icon toggle-audio"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

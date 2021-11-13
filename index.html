@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Jogo da cobrinha</title>
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/boxicons.min.css" />
+	<link rel="stylesheet" href="assets/css/game.css" />
+
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery-3.6.0.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			$(".toggle-audio").click(function () {
+				$(this).toggleClass("bxs-volume-mute");
+
+				var myAudio = document.getElementById('playAudio');
+
+				if (myAudio.duration > 0 && !myAudio.paused) {
+					myAudio.pause();
+				} else {
+					myAudio.play();
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container-menu">
+		<div class="content-center">
+			<div class="menu">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>JOGO DA COBRINHA</h1>
+						<img src="assets/img/snake.gif" alt="Cobrinha" width="120">
+					</div>
+
+					<div class="col-md-12">
+						<div class="d-grid gap-2">
+							<a href="game.html" class="btn btn-block btn-success">INICIAR</a>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="d-grid gap-2">
+							<a href="creditos.html" class="btn btn-block btn-primary">VÍDEO TUTORIAL</a>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="d-grid gap-2">
+							<a href="creditos.html" class="btn btn-block btn-secondary">CRÉDITOS</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<audio controls autoplay loop id="playAudio" class="hide">
+						<source src="assets/sound/menu.ogg" type="audio/mpeg">
+					</audio>
+					<i toggle="#playAudio" class="bx bxs-volume-mute bxs-volume-full field-icon toggle-audio"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
