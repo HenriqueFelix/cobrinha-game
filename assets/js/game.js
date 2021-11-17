@@ -15,6 +15,8 @@ function Game(options) {
 
     var ctx;
 
+    var audio;
+
     this.init = function () {
         var self = this;
 
@@ -26,10 +28,21 @@ function Game(options) {
         var stage = self.options.stage;
         ctx = stage.getContext("2d");
 
+        audio = self.options.audio;
+        
         document.addEventListener("keydown", keyPush);
 
         setInterval(game, 80);
     }, keyPush = function (event) {
+        try {
+            if (audio.duration <= 0 || audio.paused) {
+                audio.play();
+                //$(".toggle-audio").toggleClass("bxs-volume-mute");
+            }
+        } catch (e) {
+            console.error(e);
+        }
+        
         switch (event.keyCode) {
             case 37: // Left
                 vx = -vel;

@@ -10,15 +10,9 @@
 
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery-3.6.0.js"></script>
-	<script src="assets/js/game.js"></script>
 
 	<script type="text/javascript">
 		$(function () {
-			var game = new Game({
-				stage: document.getElementById('stage'),
-				audio: document.getElementById('playAudio')
-			});
-
 			/*
 			$(".toggle-audio").click(function () {
 				$(this).toggleClass("bxs-volume-mute");
@@ -37,21 +31,24 @@
 </head>
 
 <body>
-	<div class="container-game">
+	<div class="container-menu">
 		<div class="content-center">
-			<canvas id="stage" width="600" height="600"></canvas>
+			<div class="menu-tutorial">
+				<iframe src="assets/video/video.mp4" allow="camera; microphone; fullscreen; speaker; display-capture" width="600" height="600"></iframe>
+			</div>
 
 			<div class="row">
 				<div class="col-md-4" style="text-align:left;">
 					<a href="index.html" class="btn btn-light">Voltar</a>
 				</div>
-
-				<div class="col-md-8">
+				<!--
+				<div class="col-md-8" style="text-align:right;">
 					<audio controls autoplay loop id="playAudio" class="hide">
-						<source src="assets/sound/game.ogg" type="audio/mpeg">
+						<source src="assets/sound/menu.ogg" type="audio/mpeg">
 					</audio>
-					<!-- <i toggle="#playAudio" class="bx bxs-volume-mute bxs-volume-full field-icon toggle-audio"></i> -->
-				</div>
+					<i toggle="#playAudio" class="bx bxs-volume-mute bxs-volume-full field-icon toggle-audio"></i>
+				</div> 
+				-->
 			</div>
 		</div>
 	</div>

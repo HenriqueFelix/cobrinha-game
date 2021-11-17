@@ -27,6 +27,25 @@
     margin-top: 25px;
 }
 
+.menu-credito {
+    width: 400px;
+    height: 400px;
+    background-image: url("../img/creditos.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 25px;
+}
+
+.menu-tutorial {
+    margin-bottom: 25px;
+}
+
+.menu-tutorial iframe {
+    width: 400px;
+    height: 400px;
+}
+
 .toggle-audio {
     font-size: 28px;
 }
@@ -58,6 +77,7 @@ canvas {
     border-radius: 4px;
     -webkit-box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.94);
     box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.94);
+    margin-bottom: 25px;
 }
 
 .hide {
